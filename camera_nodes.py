@@ -118,13 +118,13 @@ class CaptureWebcam:
 
         return
         
-class LoadWebcamImage:
+class LoadImageStream:
 
     @classmethod
     def INPUT_TYPES(cls):
         return {
                 "required": {
-                    "image_path": ("STRING", {"default": './ComfyUI/custom_nodes/ComfyUI_toyxyz_test_nodes/CaptureCam/captured_frames/capture.jpg', "multiline": False}), 
+                    "image_path": ("STRING", {"default": './ComfyUI/custom_nodes/ComfyUI_camera_node/CaptureCam/captured_frames/capture.jpg', "multiline": False}), 
                 }
             }
 
@@ -181,7 +181,7 @@ class SaveImagetoPath:
 
     INPUT_TYPES = lambda: {
         "required": {
-            "path": ("STRING", {"default": "./ComfyUI/custom_nodes/ComfyUI_toyxyz_test_nodes/CaptureCam/rendered_frames/render.jpg"}),
+            "path": ("STRING", {"default": "./ComfyUI/custom_nodes/ComfyUI_camera_node/CaptureCam/rendered_frames/render.jpg"}),
             "image": ("IMAGE",),
             "save_sequence": (("false", "true"), {"default": "false"}),
             "image_format": ((".jpg", ".png", ".bmp"), {"default": ".jpg"}),
@@ -347,7 +347,7 @@ class ImageResize_Padding:
 
 NODE_CLASS_MAPPINGS = {
     "CaptureWebcam": CaptureWebcam,
-    "LoadWebcamImage": LoadWebcamImage,
+    "LoadImageStream": LoadImageStream,
     "SaveImagetoPath": SaveImagetoPath,
     "LatentDelay": LatentDelay,
     "ImageResize_Padding": ImageResize_Padding,
@@ -355,7 +355,7 @@ NODE_CLASS_MAPPINGS = {
 
 NODE_DISPLAY_NAME_MAPPINGS = {
     "CaptureWebcam": "Capture Webcam",
-    "LoadWebcamImage": "Load Webcam Image",
+    "LoadImageStream": "Load Image Stream",
     "SaveImagetoPath": "Save Image to Path",
     "LatentDelay": "LatentDelay",
     "ImageResize_Padding": "ImageResize_Padding",
