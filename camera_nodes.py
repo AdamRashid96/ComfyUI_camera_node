@@ -9,16 +9,8 @@ import time
 import cv2
 from pathlib import Path
 import hashlib
-from nodes import MAX_RESOLUTION, SaveImage, common_ksampler
+from nodes import MAX_RESOLUTION
 
-import mss #Screen Capture
-import win32gui
-import win32ui
-import win32con
-import win32api
-from win32gui import FindWindow, GetWindowRect #Get window size and location
-import ctypes #for Find window
-from ctypes import windll, wintypes
 
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
