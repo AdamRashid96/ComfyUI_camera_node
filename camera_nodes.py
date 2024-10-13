@@ -70,7 +70,7 @@ class CaptureWebcam:
     RETURN_NAMES = ("image", )
     FUNCTION = "load_image"
     
-    CATEGORY = "ToyxyzTestNodes"
+    CATEGORY = "CameraNodes"
 
     def __init__(self):
         self.webcam_index = 0
@@ -124,7 +124,7 @@ class LoadImageStream:
     RETURN_NAMES = ("image",)
     FUNCTION = "load_image"
     
-    CATEGORY = "ToyxyzTestNodes"
+    CATEGORY = "CameraNodes"
 
     def load_image(self, image_path):
 
@@ -197,7 +197,7 @@ class SaveImagetoPath:
     OUTPUT_NODE = True
     FUNCTION = "execute"
     
-    CATEGORY = "ToyxyzTestNodes"
+    CATEGORY = "CameraNodes"
 
     def execute(
         self,
@@ -280,7 +280,7 @@ class LatentDelay:
     RETURN_TYPES = ("LATENT",)
     FUNCTION = "LatentDelay"
     
-    CATEGORY = "ToyxyzTestNodes"
+    CATEGORY = "CameraNodes"
 
     def LatentDelay(self, latent, delaytime):
         time.sleep(delaytime)
@@ -305,7 +305,7 @@ class ImageResize_Padding:
     RETURN_TYPES = ("IMAGE", "INT", "INT",)
     RETURN_NAMES = ("IMAGE", "width", "height",)
     FUNCTION = "execute"
-    CATEGORY = "ToyxyzTestNodes"
+    CATEGORY = "CameraNodes"
 
     def execute(self, image, width, height, padding, Red, Green, Blue, interpolation="nearest"):
         _, oh, ow, _ = image.shape
